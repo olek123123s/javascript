@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <head>
+ <title> proste obliczenia</title>
+ <meta charset="utf-8">
+ </head>
+<body>
+<div style="color:green;font-size:34px;">
+ <script language="JavaScript">
+var d1=prompt("d1=","");
+var g1=prompt("g1=","");
+var d2=prompt("d2=","");
+var g2=prompt("g2=","");
+var mnozenie;
+var a=parseFloat(d1);
+var b=parseFloat(d2);
+var c=parseFloat(g1);
+var d=parseFloat(g2);
+ if(a>b&&d>c)
+ {
+    mnozenie=(86400*a-86400*b)+(c*3600-d*3600);
+    document.write("różnica sekund miedzy dniami "+a+" a "+b+" wynosi "+mnozenie+"<br>");
+ }
+ else
+ {
+    if(a<b&&d<c);
+    {    
+    mnozenie=(86400*b-86400*a)+(d*3600-c*3600);
+    document.write("różnica sekund miedzy dniami "+a+" a "+b+" wynosi "+mnozenie+"<br>");
+    }
+ }
+ 
+ 
+ </script>
+</div>
+</body>
+</html>
