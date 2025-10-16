@@ -1,0 +1,46 @@
+<html>
+<head>
+ <script language="JavaScript">
+function pole_sliu(a_buc,b_buc)
+{
+ a=parseFloat(a_sliu);
+ b=parseFloat(b_sliu);
+ pole=a*b;
+ document.getElementsByName('pole')[0].value=pole.toFixed(2); /* na dokument */
+ alert("pole="+pole.toFixed(2)+" cm^2"); /*do okna Alert */
+ pokaz1.innerHTML="pole="+pole.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+}
+function obwod_sliu(a_sliu,b_sliu)
+{
+ a=parseFloat(a_sliu);
+ b=parseFloat(b_sliu)
+ obwod=2*a+2*b;
+ document.getElementsByName('obwod')[0].value=obwod.toFixed(2);
+ alert("obwód="+obwod.toFixed(2)+" cm");
+ pokaz2.innerHTML="obwód="+obwod.toFixed(2)+"cm";
+}
+ </script>
+</head>
+<body>
+Obliczanie pola i obwodu prostokąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="pole_sliu(this.a_sliu.value,this.b_sliu.value);
+obwod_sliu(this.a_sliu.value,this.b_sliu.value);return false">
+ Podaj a=
+ <input size="6" name="a_sliu">
+ Podaj b=
+ <input size="6" name="b_sliu">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ pole=
+ <input size="6" name="pole">
+ obwód=
+ <input size="6" name="obwod">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>
