@@ -1,0 +1,51 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+</head>
+<body>
+
+ <h1>trójkąt</h1><br><br>
+ Podaj xa   <input type="text" id="xa" value=""><br><br><br>
+ Podaj ya   <input type="text" id="ya" value=""><br><br><br>
+ Podaj xb   <input type="text" id="xb" value=""><br><br><br>
+ Podaj ya   <input type="text" id="yb" value=""><br><br><br>
+ Podaj xc   <input type="text" id="xc" value=""><br><br><br>
+ Podaj ya   <input type="text" id="yc" value=""><br><br><br>
+ <input type="button" name="ab" value="Oblicz AB" Onclick="AB_BUC()"><br><br>
+ <input type="button" name="bc" value="Oblicz BC" Onclick="BC_BUC()"><br><br>
+ <input type="button" name="ac" value="Oblicz AC" Onclick="AC_BUC()"><br><br>
+ <div style="color:red;font-size:50px;"id="nazwa"></div>
+ <script type="text/javascript">
+    function AB_BUC()
+    {
+       var xa= parseFloat(document.getElementById('xa').value);
+       var ya= parseFloat(document.getElementById('ya').value);
+       var xb= parseFloat(document.getElementById('xb').value);
+       var yb= parseFloat(document.getElementById('yb').value);
+       var wynik=Math.sqrt(Math.pow(xa-xb, 2) + Math.pow(ya-yb,2));
+       document.write("AB="+wynik.toFixed(2))   ;
+    }
+   
+    function BC_BUC()
+    {
+       var xb= parseFloat(document.getElementById('xb').value);
+       var yb= parseFloat(document.getElementById('yb').value);
+       var xc= parseFloat(document.getElementById('xc').value);
+       var yc= parseFloat(document.getElementById('yc').value);
+       var wynik=Math.sqrt(Math.pow(xb-xc, 2) + Math.pow(yb-yc,2));
+       document.write("BC="+wynik.toFixed(2));
+    }
+   
+    function AC_BUC()
+    {
+       var xa= parseFloat(document.getElementById('xa').value);
+       var ya= parseFloat(document.getElementById('ya').value);
+       var xc= parseFloat(document.getElementById('xc').value);
+       var yc= parseFloat(document.getElementById('yc').value);
+
+       var wynik=Math.sqrt(Math.pow(xa-xc, 2) + Math.pow(ya-yc,2));
+       document.write("AC="+wynik.toFixed(2));
+    }
+   </script>
+</body>
+</html>
