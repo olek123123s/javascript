@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        function Wazon(_kolor, _cena, _producent) {
+            this.producent = _producent;
+            this.kolor = _kolor;
+            this.cena = _cena;
+            this.Wazon_wyswietl_sliu =function() {
+                document.write(`Wazon kosztuje ${this.producent}zł, wyprodukowany przez ${this.kolor} ,ma kolor ${this.cena}`);
+            }
+        }
+
+        let wazon1 = new Wazon("Wazonx", "purpurowy",69 );
+        wazon1.Wazon_wyswietl_sliu()
+    </script>
+</body>
+</html>

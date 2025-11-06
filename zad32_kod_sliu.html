@@ -1,0 +1,41 @@
+Zadanie 32-KOD<br>
+<textarea name="nazwa" cols="145" rows="40" readonly>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            function Wazon(kolor,  producent, cena, ocena) {
+                this.producent = producent;
+                this.kolor = kolor;
+                this.cena = cena;
+                this.ocena = ocena;
+            }
+            Wazon.prototype.wypisz = function ()
+     {
+     alert(this.producent + ' ' + this.kolor+ ' ' + this.cena+ ' ' + this.ocena);
+     };
+            let wazon1 = new Wazon("purpurowy", "Wazonx", 69 );
+            let wazon2 = new Wazon("baby-blue", "wazonyjakdzwony", 150);
+            let wazon3 = new Wazon("vantana black", "cool-lookin wazony", 449.99);
+            wazon1.ocena =4.6;
+            wazon2.ocena =4.2;
+            wazon3.ocena =3.9;
+    
+            wazon1.wypisz();
+            wazon2.wypisz();
+            wazon3.wypisz();
+    
+            document.write("dostęp do właściwości"+"<br>");
+            document.write("wazon pierwszy"+" "+wazon1.kolor+" "+wazon1.producent+" "+wazon1.cena+"zł "+wazon2.ocena+" gwiazdek/gwiazdki"+"<br>");
+            document.write("wazon drugi"+" "+wazon2.kolor+" "+wazon2.producent+" "+wazon2.cena+"zł "+wazon2.ocena+" gwiazdek/gwiazdki"+"<br>");
+            document.write("wazon trzeci"+" "+wazon3.kolor+" "+wazon3.producent+" "+wazon3.cena+"zł "+wazon3.ocena+" gwiazdek/gwiazdki");
+      </script>
+    </body>
+    <br>
+     programowanie obiektowe 
+    </html>    
+</textarea>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <ol>
+    <li>
+        <h2>W jaki sposób można określić właściwość danego obiektu?</h2>
+        <p><b>Sposób 1</b> <br>
+            Używając zapisu postaci: <br>
+            a) nazwa_obiektu.nazwa_właściwości="tekst";  dla właściwości typu tekstowego  np. <br>
+            auto.marka="Opel Omega"; <br>
+            b) nazwa_obiektu.nazwa_właściwości=liczba;  dla właściwości typu liczbowego  np. <br>
+            auto.rok=1996; <br>
+            auto.cena=25000; <br> 
+            <b>Sposób 2</b> <br>
+            używając zapisu postaci: <br>
+            nazwa_obiektu[nazwa_właściwości]; <br>
+            np. auto[cena]=25000; <br>
+        </p>
+    </li>
+    <li>
+        <h2>W jaki sposób można odwołać się do pól i metod?</h2>
+        <p>Do właściwości i metod można się odwołać podobnie jak do zwykłych zmiennych <br>
+            i funkcji, trzeba tylko przed ich nazwą umieścić nazwę obiektu, którego są elementami <br>
+            (np. zmienną, która przechowuje dany obiekt), i kropkę. <br>
+            np. console.log(samochod1.kolor);  wyświetla kolor obiektu samochod</p>
+    </li>
+    <li>
+        <h2>Wymień cechy charakterystyczne konstruktora</h2>
+        <ul>
+            <li>jest wywoływany (uruchamiany) automatycznie w chwili tworzenia obiektu danej klasy - na
+                rzecz tego obiektu,</li>
+            <li>nazywa się tak samo jak klasa,</li>
+            <li>nie zwraca żadnej wartości ,
+            </li>
+            <li>może przyjmować argumenty - tak jak zwykła funkcja czy metoda, aby następnie powołać do
+                życia obiekt za pomocą operatora new. </li>
+        </ul>
+    </li>
+    <li>
+        <h2>Konstruowanie obiektu na podstawie przykładu</h2>
+        <p>var kot_1 = <br>
+            { <br>
+            imie : 'Mikołaj', <br>
+            przydomek : 'rudy', <br>
+            masc : 'pomaranczowy,' <br>
+            wyświetl :function () <br>
+            { <br>
+            Document.write(this.przydomek + ' ' + this.imie) <br>
+            } <br>
+            }</p>
+    </li>
+    <li>
+        <h2>Znaczenie słowa this. Jak oddzielamy pola oraz metody?</h2>
+        <p>Słowo kluczowe this  pozwala odwołać się do pola lub metody obiektu z wnętrza tego obiektu. <br>
+            <br>Metody i pola muszą być odzielne przecinkami w obrębie jednego obiektu.</p>
+    </li>
+    <li>
+        <h4>Konstruktor w JS na podstawie przykładu wraz z opisem</h4>
+        <p>function klient(nazwisko_k,imie_k,zawod_k) <br>
+            { <br>
+            this.nazwisko=nazwisko_k; <br>
+            this.imie=imie_k; <br>
+            this.zawod=zawod_k; <br>
+            wypisz = function () <br>
+             { <br>
+             alert(this.nazwisko + ' ' + this.imie) <br>
+             } <br>
+            }
+            </p>
+    </li>
+    <li>
+        <h2>Znaczenie słowa kluczowego new wraz z przykładem</h2>
+        <p>Do utworzenia nowego obiektu na podstawie konstruktora stosowane jest słowo kluczowe new. <br>
+            var osoba1 = new klient('Kowalski', 'Jan', 'kierowca'); <br>
+            var osoba2 = new klient('Nowak', 'Anna', 'sekretarka'); <br></p>
+    </li>
+    <li>
+        <h2>Znaczenie słowa kluczowego prototype wraz z przykładem i opisem</h2>
+        <p>function klient() <br>
+            { <br>
+            this.nazwisko='Kowalski'; <br>
+            this.imie='Paweł'; <br>
+            } <br>
+            klient.prototype.pisz_dane = function () <br>
+             { <br>
+             document.write(this.nazwisko + ' ' + this.imie) <br>
+             } <br>
+            klient.prototype.zawod = 'kierowca'; <br>
+            var osoba1 = new klient(); <br> 
+            osoba1.pisz_dane();
+            <br>
+            <b>Właściwość prototype może być również wykorzystana do dodawania dodatkowych
+                metod lub właściwości do istniejących obiektów.
+                </b>
+        </p>
+    </li>
+    </ol>
+</body>
+</html>
