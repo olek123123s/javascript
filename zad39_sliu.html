@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pl">
+<head><meta charset="utf-8"><title>Zadanie38 - przedziały</title></head>
+<body>
+<h2>Zadanie 38 - Przedziały liczbowe</h2>
+<script>
+
+var imie = prompt("Podaj swoje imię:", "TwojeImie") || "TwojeImie";
+var nazwisko = prompt("Podaj swoje nazwisko:", "Sliusarenko") || "Sliusarenko";
+var dzien = parseInt(prompt("Podaj dzień urodzenia (liczba):", "1")) || 1;
+document.write("Imię: "+imie+"; Nazwisko: "+nazwisko+"; Dzień: "+dzien+"<br>");
+document.write("Wybierz opcję:<br>");
+document.write('<button onclick="showTheory()">1 - Teoria operatorów logicznych</button> ');
+document.write('<button onclick="checkInterval()">2 - Sprawdź przedział (nazwisko+20)</button> ');
+document.write('<button onclick="checkTwoIntervals()">3 - Sprawdź przedziały (dzien+50)</button>');
+function showTheory(){ document.write("<h3>Operatorzy logiczni</h3><p>&amp;&amp; (AND), || (OR), ! (NOT) - przykłady w instrukcji.</p>"); }
+function checkInterval(){
+  var val = parseFloat(prompt("Podaj liczbę do sprawdzenia przedziału (od; do]","0"));
+  var left = nazwisko.length + 0; var right = nazwisko.length + 20;
+  document.write("<br>Przedział: ("+left+"; "+right+"]<br>");
+  var ok = (val>left && val<=right);
+  document.write("Liczba "+val+" należy do przedziału? "+ ok + "<br>");
+}
+function checkTwoIntervals(){
+  var val = parseFloat(prompt("Podaj liczbę do sprawdzenia","0"));
+  var a = dzien + 50; var b = dzien + 60;
+  var ok = (val < a) || (val >= b);
+  document.write("<br>Sprawdzanie (-∞, "+a+") lub ["+b+", +∞) -> wynik: "+ok+"<br>");
+}
+</script>
+</body>
+</html>
