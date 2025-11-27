@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie48 - Szereg harmoniczny</title>
+</head>
+<body>
+    <h2>Suma szeregu harmonicznego od 1 do 1 000 000</h2>
+    
+    <button onclick="obliczSume()">Oblicz sumę</button>
+    
+    <div id="wynik"></div>
+
+    <script>
+        function obliczSume() {
+            let suma_kow = 0;
+            let i_kow = 1;
+            
+            while(i_kow <= 1000000) {
+                suma_kow = suma_kow + 1 / i_kow;
+                i_kow++;
+            }
+            
+            document.getElementById("wynik").innerHTML = 
+                "Wynik: " + suma_kow.toFixed(10);
+        }
+    </script>
+</body>
+</html>

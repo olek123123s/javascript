@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie49 - Obliczanie silni</title>
+</head>
+<body>
+    <h2>Obliczanie silni - sposób iteracyjny</h2>
+    
+    <p>Podaj liczbę n: <input type="number" id="n_sliu"></p>
+    <button onclick="obliczSilnie()">Oblicz silnię</button>
+    
+    <div id="wynik"></div>
+
+    <script>
+        function obliczSilnie() {
+            let n_sliu = parseInt(document.getElementById("n_sliu").value);
+            let silnia_sliu = 1;
+            
+            for(let i = 1; i <= n_sliu; i++) {
+                silnia_sliu = silnia_sliu * i;
+            }
+            
+            document.getElementById("wynik").innerHTML = 
+                n_sliu + "! = " + silnia_sliu;
+        }
+    </script>
+</body>
+</html>ś

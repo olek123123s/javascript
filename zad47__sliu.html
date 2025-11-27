@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Zadanie 47 – Sliusarenko</title>
+</head>
+<body>
+
+<h2>Zadanie 47 – Sprawdzanie boków trójkąta (do...while)</h2>
+
+<script>
+let a_sli, b_sli, c_sli;
+
+// Funkcja sprawdzająca warunki trójkąta
+function trojkat(a, b, c) {
+    return (
+        a > 0 && b > 0 && c > 0 &&
+        (a + b > c) &&
+        (a + c > b) &&
+        (b + c > a)
+    );
+}
+
+do {
+    a_sli = parseFloat(prompt("Podaj bok a:", ""));
+    b_sli = parseFloat(prompt("Podaj bok b:", ""));
+    c_sli = parseFloat(prompt("Podaj bok c:", ""));
+
+    if (!trojkat(a_sli, b_sli, c_sli)) {
+        alert("Błędne dane! Każdy bok musi być > 0 i spełniać nierówności trójkąta.\nSpróbuj ponownie.");
+    }
+
+} while (!trojkat(a_sli, b_sli, c_sli));
+
+document.write("<h3>Wczytane poprawne boki trójkąta:</h3>");
+document.write("a = " + a_sli + "<br>");
+document.write("b = " + b_sli + "<br>");
+document.write("c = " + c_sli + "<br>");
+</script>
+
+</body>
+</html>
