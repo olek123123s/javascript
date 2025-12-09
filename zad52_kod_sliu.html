@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod zadania 52 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Kod źródłowy zadania 52</h3>
+    <textarea cols="85" rows="40">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wykonanie zadania 52 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Zadanie 52 - Rysowanie prostokąta z gwiazdek (3 pętle)</h3>
+    <div style="margin:20px;">
+        <p><strong>Obliczenia:</strong></p>
+        <p>Nazwisko: Sliusarenko (10 liter)</p>
+        <p>Imię: Jan (3 litery) - zakładamy przykładowe imię</p>
+    </div>
+    
+    <div id="wynik" style="font-family:'Courier New', monospace; font-size:14px; margin:20px;"></div>
+    
+    <script>
+        // Obliczanie wymiarów z wzorów
+        let literyNazwiska = 10; // Sliusarenko = 10 liter
+        let literyImienia = 3;   // Jan = 3 litery
+        
+        let a_sli = (literyNazwiska % 4) + 5;   // 10 % 4 = 2, 2 + 5 = 7
+        let b_sli = (literyImienia % 6) + 20;   // 3 % 6 = 3, 3 + 20 = 23
+        
+        let wynik = `<strong>Wymiary prostokąta:</strong><br>`;
+        wynik += `a = (liczba liter nazwiska % 4) + 5 = (${literyNazwiska} % 4) + 5 = ${a_sli}<br>`;
+        wynik += `b = (liczba liter imienia % 6) + 20 = (${literyImienia} % 6) + 20 = ${b_sli}<br><br>`;
+        
+        // PIERWSZA PĘTLA - górna krawędź
+        for (let j = 0; j < b_sli; j++) {
+            wynik += '*';
+        }
+        wynik += '<br>';
+        
+        // DRUGA PĘTLA - środkowe wiersze (pionowe krawędzie)
+        for (let i = 1; i < a_sli - 1; i++) {
+            wynik += '*'; // lewa krawędź
+            for (let j = 1; j < b_sli - 1; j++) {
+                wynik += '&nbsp;&nbsp;'; // środek (spacje)
+            }
+            wynik += '*<br>'; // prawa krawędź
+        }
+        
+        // TRZECIA PĘTLA - dolna krawędź
+        for (let j = 0; j < b_sli; j++) {
+            wynik += '*';
+        }
+        
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

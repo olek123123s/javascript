@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod zadania 48 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Kod źródłowy zadania 48</h3>
+    <textarea cols="80" rows="20">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wykonanie zadania 48 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Zadanie 48 - Suma szeregu harmonicznego</h3>
+    <div id="wynik" style="color:green; font-size:18px;"></div>
+    <script>
+        let suma_sli = 0;
+        for (let i_sli = 1; i_sli <= 1000000; i_sli++) {
+            suma_sli += 1 / i_sli;
+        }
+        document.getElementById("wynik").innerHTML = 
+            `Suma szeregu harmonicznego od 1 do 1,000,000 = ${suma_sli.toFixed(10)}`;
+    </script>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod zadania 50 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Kod źródłowy zadania 50</h3>
+    <textarea cols="85" rows="30">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wykonanie zadania 50 - Sliusarenko</title>
+</head>
+<body>
+    <h1 style="color:red; font-size:2cm; text-align:center;">Sliusarenko</h1>
+    <h2 style="color:blue; font-size:5mm; text-align:center;">
+        Zadanie 50 - Pętle zagnieżdżone (wypisywanie liczb z przesunięciem)
+    </h2>
+    <div id="wynik" style="font-family:'Courier New', monospace; font-size:16px; margin:20px;"></div>
+    <script>
+        let wynik = '';
+        
+        for (let i = 1; i <= 10; i++) {
+            // Dodawanie spacji dla przesunięcia
+            for (let sp = 0; sp < i; sp++) {
+                wynik += '&nbsp;&nbsp;'; // Dwie spacje niełamiące
+            }
+            wynik += i + '<br>';
+        }
+        
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+    <br><br>
+    <div style="text-align:center;">
+        <input type="button" value="Zamknij okno" onclick="window.close()">
+    </div>
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

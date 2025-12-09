@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 53 - Sliusarenko</title>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+        let a_sli = parseInt(prompt("Podaj wysokość a:"));
+        let b_sli = parseInt(prompt("Podaj szerokość b:"));
+        let wynik = '';
+        for (let j = 0; j < b_sli; j++) wynik += '*';
+        wynik += '<br>';
+        for (let i = 1; i < a_sli - 1; i++) {
+            let wiersz_sli = '*';
+            for (let j = 1; j < b_sli - 1; j++) {
+                wiersz_sli += '&nbsp;&nbsp;';
+            }
+            wiersz_sli += '*';
+            wynik += wiersz_sli + '<br>';
+        }
+        for (let j = 0; j < b_sli; j++) wynik += '*';
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+</body>
+</html>

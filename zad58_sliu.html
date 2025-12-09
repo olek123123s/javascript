@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 58 - Sliusarenko</title>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+        let x1 = parseInt(prompt("Podaj pierwszą liczbę:"));
+        let x2 = parseInt(prompt("Podaj drugą liczbę:"));
+        let wynik = '';
+        if (x1 === x2) {
+            alert("Liczby równe – brak obliczeń.");
+        } else if (x1 < x2) {
+            for (let i = x1; i <= x2; i++) {
+                if (i % 2 !== 0) wynik += `<span style="color:green;font-size:20px">${i} </span>`;
+            }
+        } else {
+            for (let i = x1; i >= x2; i--) {
+                if (i % 2 !== 0) wynik += `<span style="color:blue;font-size:10px">${i} </span>`;
+            }
+        }
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+</body>
+</html>

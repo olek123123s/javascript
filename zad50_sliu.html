@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 50 - Sliusarenko</title>
+</head>
+<body>
+    <h1 style="color:red; font-size:2cm;">Sliusarenko</h1>
+    <h2 style="color:blue; font-size:5mm;">Pętle zagnieżdżone</h2>
+    <div id="wynik"></div>
+    <script>
+        let wynik = '';
+        for (let i = 1; i <= 10; i++) {
+            for (let sp = 0; sp < i; sp++) {
+                wynik += '&nbsp;';
+            }
+            wynik += i + '<br>';
+        }
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+</body>
+</html>

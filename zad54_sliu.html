@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 54 - Sliusarenko</title>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+        let imie = prompt("Podaj imię:");
+        let nazwisko = prompt("Podaj nazwisko:");
+        let a_sli = (nazwisko.length % 4) + 5;
+        let b_sli = (imie.length % 6) + 20;
+        let wynik = '';
+        for (let i = 0; i < a_sli; i++) {
+            for (let j = 0; j < b_sli; j++) {
+                if (i === 0 || i === a_sli - 1 || j === 0 || j === b_sli - 1) {
+                    wynik += '*';
+                } else {
+                    wynik += '&nbsp;&nbsp;';
+                }
+            }
+            wynik += '<br>';
+        }
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+</body>
+</html>

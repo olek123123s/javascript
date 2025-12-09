@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 55 - Sliusarenko</title>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+        let l1_t_sli, l2_t_sli;
+        do {
+            l1_t_sli = parseInt(prompt("Podaj liczbę 1 z <20,60>:"));
+        } while (l1_t_sli < 20 || l1_t_sli > 60);
+        do {
+            l2_t_sli = parseInt(prompt("Podaj liczbę 2 z <20,60>:"));
+        } while (l2_t_sli < 20 || l2_t_sli > 60);
+        let pocz_sli = parseInt(prompt("Początkowa wielkość tekstu:"));
+        let tekst_sli = prompt("Podaj tekst:");
+        let wynik = '';
+        let rozmiar = pocz_sli;
+        if (l1_t_sli < l2_t_sli) {
+            while (rozmiar <= 100) {
+                wynik += `<p style="font-size:${rozmiar}px">${tekst_sli}</p>`;
+                rozmiar += 5;
+            }
+        } else if (l2_t_sli < l1_t_sli) {
+            while (rozmiar >= 0) {
+                wynik += `<p style="font-size:${rozmiar}px">${tekst_sli}</p>`;
+                rozmiar -= 5;
+            }
+        } else {
+            wynik += `<p style="font-size:${rozmiar}px">${tekst_sli}</p>`;
+        }
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+</body>
+</html>

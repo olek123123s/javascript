@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod zadania 49 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Kod źródłowy zadania 49</h3>
+    <textarea cols="80" rows="25">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wykonanie zadania 49 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Zadanie 49 - Obliczanie silni (iteracyjnie)</h3>
+    <div id="wynik" style="color:maroon; font-size:20px; margin:20px;"></div>
+    <script>
+        let n_sli = parseInt(prompt("Podaj liczbę n do obliczenia silni:"));
+        let silnia_sli = 1;
+        
+        if (n_sli < 0) {
+            document.getElementById("wynik").innerHTML = 
+                "Silnia jest zdefiniowana tylko dla liczb nieujemnych!";
+        } else if (n_sli === 0) {
+            silnia_sli = 1;
+            document.getElementById("wynik").innerHTML = 
+                `${n_sli}! = ${silnia_sli}`;
+        } else {
+            for (let i = 1; i <= n_sli; i++) {
+                silnia_sli *= i;
+            }
+            document.getElementById("wynik").innerHTML = 
+                `${n_sli}! = ${silnia_sli}`;
+        }
+    </script>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

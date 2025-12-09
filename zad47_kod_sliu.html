@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod zadania 47 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Kod źródłowy zadania 47</h3>
+    <textarea cols="80" rows="25">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wykonanie zadania 47 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Zadanie 47 - Sprawdzenie trójkąta</h3>
+    <div id="wynik" style="color:navy; font-size:18px;"></div>
+    <script>
+        let a_sli, b_sli, c_sli;
+        do {
+            a_sli = parseFloat(prompt("Podaj długość boku a:"));
+            b_sli = parseFloat(prompt("Podaj długość boku b:"));
+            c_sli = parseFloat(prompt("Podaj długość boku c:"));
+        } while (!(a_sli > 0 && b_sli > 0 && c_sli > 0 &&
+                   a_sli + b_sli > c_sli &&
+                   a_sli + c_sli > b_sli &&
+                   b_sli + c_sli > a_sli));
+
+        document.getElementById("wynik").innerHTML = 
+            `Boki: a=${a_sli}, b=${b_sli}, c=${c_sli} tworzą trójkąt.`;
+    </script>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>

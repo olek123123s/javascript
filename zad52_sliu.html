@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 52 - Sliusarenko</title>
+</head>
+<body>
+    <div id="wynik"></div>
+    <script>
+        let literyNazwiska = 10; 
+        let literyImienia = 5;   
+        let a_sli = (literyNazwiska % 4) + 5;
+        let b_sli = (literyImienia % 6) + 20;
+        let wynik = '';
+        for (let i = 0; i < a_sli; i++) {
+            for (let j = 0; j < b_sli; j++) {
+                if (i === 0 || i === a_sli - 1 || j === 0 || j === b_sli - 1) {
+                    wynik += '*';
+                } else {
+                    wynik += '&nbsp;&nbsp;';
+                }
+            }
+            wynik += '<br>';
+        }
+        document.getElementById("wynik").innerHTML = wynik;
+    </script>
+</body>
+</html>

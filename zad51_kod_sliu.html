@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod zadania 51 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Kod źródłowy zadania 51</h3>
+    <textarea cols="85" rows="35">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wykonanie zadania 51 - Sliusarenko</title>
+</head>
+<body>
+    <h3>Zadanie 51 - Modyfikacja zadania 50 (wczytywanie danych)</h3>
+    <div id="wynik" style="font-family:'Courier New', monospace; font-size:16px; margin:20px;"></div>
+    <script>
+        // Wczytywanie danych
+        let ile = parseInt(prompt("Ile razy powtórzyć napis?"));
+        let tekst = prompt("Podaj swoje inicjały (np. MS):");
+        
+        let wynik = '';
+        
+        // Pętla zagnieżdżona z wczytanymi danymi
+        for (let i = 1; i <= ile; i++) {
+            // Dodawanie spacji dla przesunięcia
+            for (let sp = 0; sp < i; sp++) {
+                wynik += '&nbsp;&nbsp;'; // Dwie spacje niełamiące
+            }
+            // Format: liczba_inicjały_liczba
+            wynik += i + '_' + tekst + '_' + i + '<br>';
+        }
+        
+        document.getElementById("wynik").innerHTML = 
+            `<strong>Ilość powtórzeń:</strong> ${ile}<br>` +
+            `<strong>Inicjały:</strong> ${tekst}<br><br>` +
+            wynik;
+    </script>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>
+    </textarea>
+    <br><br>
+    <input type="button" value="Zamknij okno" onclick="window.close()">
+</body>
+</html>
