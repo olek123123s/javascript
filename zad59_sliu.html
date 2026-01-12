@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+R: <input id="r" value="1.5"> <button onclick="
+let R=parseFloat(r.value),m=Math.floor(R),c=0;
+for(x=-m;x<=m;x++) for(y=-m;y<=m;y++) if(x*x+y*y<=R*R) c++;
+wynik.innerHTML='N('+R+')='+c">Oblicz</button>
+<div id="wynik"></div>
+
+<script>
+let t=[0,1,1.5,2.01,4.5,10,1005];
+document.write('<table border=1><tr><th>R</th><th>N(R)</th></tr>');
+for(i=0;i<t.length;i++){
+ let R=t[i],m=Math.floor(R),c=0;
+ for(x=-m;x<=m;x++) for(y=-m;y<=m;y++) if(x*x+y*y<=R*R) c++;
+ document.write('<tr><td>'+R+'</td><td>'+c+'</td></tr>');
+}
+document.write('</table>');
+</script>
+</body>
+</html>
